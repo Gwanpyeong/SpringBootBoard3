@@ -1,4 +1,4 @@
-package com.mysite.sbb.answer;
+package com.mysite.sbb.answer; 
 
 import java.time.LocalDateTime;
 
@@ -11,21 +11,21 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.Setter; 
 
-@Getter
-@Setter
-@Entity
-public class Answer {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+@Getter 
+@Setter 
+@Entity 
+public class Answer { 
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    private Integer id;
 
-	@Column(columnDefinition = "TEXT")
-	private String content;
+    @Column(columnDefinition = "TEXT") 
+    private String content; 
 
-	private LocalDateTime createDate;
+    private LocalDateTime createDate; 
 
-	@ManyToOne
-	private Question question;
+    @ManyToOne 
+    private Question question; 
 }
